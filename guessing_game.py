@@ -47,6 +47,7 @@ def start_game():
             tries += 1
         elif user_guess == random_number:
             print("You guessed {}".format(user_guess))
+            print(f"You've guessed the number {random_number} after {tries} attempts")
 
             user_input = input("Would you like to play again ? (y/n) ")
             if user_input.lower() == 'y':
@@ -55,7 +56,6 @@ def start_game():
                 tries = 0
                 continue
             else:
-                print(f"You've guessed the number {random_number} after {tries} attempts")
                 print("GAME OVER...")
                 break
 
